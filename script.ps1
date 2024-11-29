@@ -1,4 +1,3 @@
 "hola mundo"
-New-Item c:\testtesttest -type directory
-
-"nuevo hola mundo"
+New-Item c:\testtesttest2 -type directory
+"Nuevo test"
