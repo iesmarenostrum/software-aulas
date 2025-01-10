@@ -12,3 +12,10 @@ foreach ($user in $users) {
   }
 
 }
+
+$nombre_equipo = $env:computername
+$aula = $nombre_equipo.Substring(0,6)
+
+curl -o c:\software\$aula.ps1 https://raw.githubusercontent.com/iesmarenostrum/software-aulas/refs/heads/main/$aula.ps1
+
+invoke-expression -Command "c:\software\$aula.ps1"
