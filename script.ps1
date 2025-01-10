@@ -12,4 +12,3 @@ foreach ($user in $users) {
   }
 
 }
-New-Item c:\test4 -type directory
