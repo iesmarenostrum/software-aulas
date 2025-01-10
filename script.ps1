@@ -14,8 +14,11 @@ foreach ($user in $users) {
 }
 
 $nombre_equipo = $env:computername
-$aula = $nombre_equipo.Substring(0,6)
+$aula = $nombre_equipo.Substring(0,6).toLower()
 
-curl -o c:\software\$aula.ps1 https://raw.githubusercontent.com/iesmarenostrum/software-aulas/refs/heads/main/$aula.ps1
+$fileAulaName = "c:\software\${aula}.ps1"
+$urlAula = "https://raw.githubusercontent.com/iesmarenostrum/software-aulas/refs/heads/main/${aula}.ps1"
 
-invoke-expression -Command "c:\software\$aula.ps1"
+curl -o "$fileAulaName" "$urlAula"
+
+invoke-expression -Command "c:\software\${aula}.ps1"
