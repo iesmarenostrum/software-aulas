@@ -1,5 +1,5 @@
 # Borrar usuarios que no se conectan hace más de 100 días
-$users = Get-LocalUser | Where-Object {$_.description -eq "pGina created" -and $_.Lastlogon -le (Get-Date).AddDays(-100)} | Select-Object Name,SID,Lastlogon 
+$users = Get-LocalUser | Where-Object {$_.description -eq "pGina created" -and $_.Lastlogon -le (Get-Date).AddDays(-50)} | Select-Object Name,SID,Lastlogon
 
 foreach ($user in $users) {
   #Eliminar cuenta
