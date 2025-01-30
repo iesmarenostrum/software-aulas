@@ -1,5 +1,5 @@
-
 If(-Not (Test-Path -Path "c:\sandcastleinstalado.txt")) {
+  "Sandcastle Help Builder"
   Add-Type -AssemblyName System.IO.Compression.FileSystem
   function Unzip
   {
@@ -17,7 +17,11 @@ If(-Not (Test-Path -Path "c:\sandcastleinstalado.txt")) {
   Unzip "$zipFile" "$outFolder"
 
 
-  "Sandcastle Help Builder"
   invoke-expression -Command "cmd /c msiexec /i $outFolder\InstallResources\SandcastleHelpFileBuilder.msi /quiet /qn" 
+
+  "Sandcastle Toolkit for Visual Studio"
+  invoke-expression -Command "cmd /c 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VSIXInstaller.exe' /q $outFolder\InstallResources\SHFBVisualStudioPackage_VS2022AndLater.vsix"
+
+
   echo sandcastleinstalado > c:/sandcastleinstalado.txt
 }
