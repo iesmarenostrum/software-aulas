@@ -23,5 +23,5 @@ If(-Not (Test-Path -Path "c:\program files (x86)\EWSoftware\Sandcastle Help File
   invoke-expression -Command "cmd /c 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\VSIXInstaller.exe' /q $outFolder\InstallResources\SHFBVisualStudioPackage_VS2022AndLater.vsix"
 
 
-  echo sandcastleinstalado > c:/sandcastleinstalado.txt
+  # echo sandcastleinstalado > c:/sandcastleinstalado.txt
 }
