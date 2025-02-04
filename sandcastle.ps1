@@ -1,4 +1,4 @@
-If(-Not (Test-Path -Path "c:\program files (x86)\EWSoftware\Sandcastle Help File Builder\Tools")) {
+If(-Not (Test-Path -Path "c:\program files (x86)\EWSoftware\Sandcastle Help File Builder\Tools\SandcastleBuilderGUI.exe")) {
   "Sandcastle Help Builder"
   Add-Type -AssemblyName System.IO.Compression.FileSystem
   function Unzip
